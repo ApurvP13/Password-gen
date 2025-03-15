@@ -55,6 +55,25 @@ h1 {
   padding-right: 15px; */
 }
 
+.inputs-and-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#length-inp {
+  width: 200px;
+  height: 38px;
+  text-align: start;
+  border-radius: 5px;
+  border: none;
+  margin: 0px 30px;
+  color: #1f2937;
+  padding-left: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
 #gen-pass {
   display: flex;
   justify-content: center;

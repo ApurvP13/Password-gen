@@ -11,18 +11,24 @@ const passOne = document.getElementById("pass1");
 const passTwo = document.getElementById("pass2");
 const sysMode = document.getElementById("mode");
 const subHead = document.getElementById("sub-head");
+const passLen = document.getElementById("length-inp");
 let darkMode = true;
 
 genBtn.addEventListener("click", () => {
   passOne.textContent = generatePass(characters);
   passTwo.textContent = generatePass(characters);
+  passLen.textContent = "";
 });
 
 function generatePass(array) {
-  let length = 15;
+  let length = Number(passLen.value);
+  if (length > 20) {
+    alert("Password lenght bigger than 20 not allowed");
+    return;
+  }
+  console.log(length);
   let retPass = "";
-  for (let index = 0; index < 15; index++) {
-    const element = array[index];
+  for (let index = 0; index < length; index++) {
     retPass += array[Math.floor(Math.random() * array.length)];
   }
   return retPass;
